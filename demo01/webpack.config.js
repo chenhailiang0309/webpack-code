@@ -1,9 +1,10 @@
 'use strict';
-
 const path = require('path')
-console.log(__dirname)
+const webpack = require('webpack')
+
+
 module.exports = {
-    mode: 'production',
+    mode: 'development',
     entry: {
         index: './src/index.js',
         search: './src/search.js'
@@ -12,7 +13,10 @@ module.exports = {
         path: path.join(__dirname, "dist"),
         filename: '[name].js'
     },
-
+    devServer: {
+        contentBase: './dist',
+        hot: true
+    },
     module: {
         rules: [
             {
@@ -24,16 +28,20 @@ module.exports = {
             }, {
                 test: /.less$/,
                 use: ['style-loader', 'css-loader', 'less-loader']
-            },{
-                test:/.(png|jpg|gif|jpeg)$/,
+            }, {
+                test: /.(png|jpg|gif|jpeg)$/,
                 // use:['file-loader']
-                use:[{
-                    loader:'url-loader',
-                    options:{
-                        limit:10240
+                use: [{
+                    loader: 'url-loader',
+                    options: {
+                        limit: 10240
                     }
                 }]
             }
         ]
-    }
+    },
+    plugins: [
+        new webpack.HotModuleReplacementPlugin()
+    ],
+    
 }

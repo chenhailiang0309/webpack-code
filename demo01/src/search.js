@@ -8,7 +8,7 @@ class Search extends React.Component {
     render() {
         return (
             <h1 className="search-text">
-                这里是一个简单的示例页面2
+                这里是一个简单的示例页面3
                 <img src={logo} />
             </h1>
         )
