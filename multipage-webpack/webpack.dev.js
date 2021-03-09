@@ -10,27 +10,27 @@ module.exports = {
     path: path.join(__dirname, "dist"),
   },
   module: {
-      rules:[
-          ...baseModuleRules,
-          {
-            test: /\.less$/,
-            use: ['style-loader', 'css-loader', 'less-loader']
-          },
-          {
-            test: /\.css$/,
-            use: ['style-loader', 'css-loader']
-          }
-      ]
+    rules: [
+      ...baseModuleRules,
+      {
+        test: /\.less$/,
+        use: ["style-loader", "css-loader", "less-loader"],
+      },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
+      },
+    ],
   },
   resolve: {
-      alias:{
-
-      }
+    alias: {
+        '@':path.join(__dirname,'src')
+    },
   },
-  plugins:[...basePlugins,new webpack.HotModuleReplacementPlugin()],
-  devServer:{
-      contentBase:'dist',
-      hot:true,
-      proxy:{}
-  }
+  plugins: [...basePlugins, new webpack.HotModuleReplacementPlugin()],
+  devServer: {
+    contentBase: "dist",
+    hot: true,
+    proxy: {},
+  },
 };

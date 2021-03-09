@@ -1,6 +1,8 @@
 const path = require("path");
 const glob = require("glob");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 const setMPA = () => {
   const entry = {};
@@ -52,7 +54,7 @@ const baseModuleRules = [
           esModule: false,
           name: "[name]_[hash:8].[ext]", //文件指纹
           limit: 10000, // 转base64
-        //   publicPath:"../../assets/images/",
+          //   publicPath:"../../assets/images/",
           outputPath: "/assets/images/", // 图片文件输出目录和publicPath有关
         },
       },
@@ -60,7 +62,7 @@ const baseModuleRules = [
   },
 ];
 
-const basePlugins = [...HtmlWebpackPlugins];
+const basePlugins = [...HtmlWebpackPlugins, new CleanWebpackPlugin()];
 
 module.exports = {
   entry,
