@@ -1,0 +1,9 @@
+{
+    "presets":[
+        "@babel/preset-env"
+    ],
+    "plugins": [ // 设置支持asynv和await
+        "@babel/plugin-transform-runtime",
+        "@babel/plugin-transform-regenerator"
+    ]
+}

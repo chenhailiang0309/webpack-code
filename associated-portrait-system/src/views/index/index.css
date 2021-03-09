@@ -1,0 +1,814 @@
+#header{
+    display: flex;
+}
+
+.portrait-box {
+    height: 100%;
+    padding-top: 44px;
+    position: relative;
+}
+
+/* 表格 */
+.table-panel {
+    min-height: 100%;
+    background-color: #FFF;
+}
+
+.search-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 34px;
+}
+
+.search-btn {
+    width: 96px;
+    height: 34px;
+    padding-left: 45px;
+    color: #FFF;
+    font-weight: bold;
+    text-align: left;
+    vertical-align: middle;
+    background: rgba(11, 142, 237, 1);
+    box-shadow: 0px 5px 8px 1px rgba(126, 126, 127, 0.32);
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+}
+
+.search-btn:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+
+    width: 16px;
+    height: 15px;
+    background: url('../../assets/image/spirit01.png') -40px -22px no-repeat;
+}
+
+.table-wrapper {
+    height: 100%;
+    background-color: rgb(241, 242, 245);
+    overflow: auto;
+}
+
+.table_btn {}
+
+.table_btn:first-child {
+    /* margin-bottom: 10px; */
+}
+
+.table_btn button {
+    display: inline-block;
+    width: 110px;
+    height: 25px;
+    /* margin-right: 10px; */
+    line-height: 23px;
+    color: #0A8AED;
+    border: 1px solid #0A8AED;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.table_btn button:hover {
+    color: #FFF;
+    background-color: #0A8AED;
+}
+
+.table-content {
+    color: #726F6F;
+}
+
+.layui-table-view {
+    border: none;
+}
+
+/* 画像 */
+.portrait-panel {
+    min-height: 100%;
+}
+
+.back-list {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 60px;
+    height: 36px;
+    padding-left: 28px;
+    padding-right: 6px;
+    line-height: 36px;
+    color: #0B8EED;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(11, 142, 237, 1);
+    box-shadow: 0px 5px 7px 1px rgba(152, 152, 152, 0.21);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.back-list i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    width: 14px;
+    height: 15px;
+    transform: translateY(-50%);
+    background: url('../../assets/image/spirit01.png') -60px -3px no-repeat;
+}
+
+.portrait-tab {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 36px;
+    border-radius: 3px;
+    background-color: #FFF;
+}
+
+.portrait-tab li {
+    float: left;
+    height: 36px;
+    line-height: 36px;
+    margin-left: -1px;
+    padding: 0 22px;
+    font-weight: bold;
+    color: #5B5C5D;
+    cursor: pointer;
+    position: relative;
+}
+
+.portrait-tab li:hover,
+.portrait-tab li.layui-this {
+    color: #FFF;
+    background: rgba(11, 142, 237, 1);
+    box-shadow: 0px 5px 7px 1px rgba(11, 142, 237, 0.21);
+    border-radius: 4px;
+}
+
+.portrait-tab li:hover:after,
+.portrait-tab li.layui-this:after {
+    display: none;
+    /* background-color: rgba(11, 142, 237, 1); */
+}
+
+.portrait-tab li:first-child:after,
+.portrait-tab li:nth-child(2):after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 1px;
+    height: 14px;
+    background-color: #5B5C5D;
+    transform: translateY(-50%);
+}
+
+.portrait-keywords {
+    height: 54px;
+    margin-bottom: 10px;
+    padding: 18px 24px;
+    background-color: #FFF;
+}
+
+.portrait-keywords li {
+    float: left;
+    padding: 0 50px 0 7px;
+    color: #585656;
+    position: relative;
+}
+
+.portrait-keywords li:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 16px;
+    background-color: #0B8EED;
+}
+
+.portrait-chart {
+    /* height: 525px; */
+    height: 600px;
+    margin-bottom: 10px;
+    padding-bottom: 50px;
+    background-color: #FFF;
+    position: relative;
+}
+
+.case-list {}
+
+.case-list_t {
+    height: 58px;
+    margin-bottom: 10px;
+    padding-left: 30px;
+    line-height: 58px;
+    background-color: #FFF;
+}
+
+.case-list_b {
+    padding: 25px;
+    background-color: #FFF;
+    position: relative;
+}
+
+.law-list {}
+
+.law-list li {
+    margin-bottom: 13px;
+    padding: 25px 18px;
+    border: 1px solid rgba(191, 191, 191, .4);
+    box-shadow: 0px 2px 6px 1px rgba(210, 210, 213, 0.56);
+}
+
+.law-list li:last-child {
+    margin-bottom: 0;
+}
+
+
+.law-list li h5 {
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.law-list li h5 span {
+    color: #F95902;
+}
+
+.law-list li p {
+    color: #585656;
+}
+
+.similar-cases-panel {}
+
+.r-list {}
+
+.result_item {
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #eee;
+    margin-bottom: 18px;
+    position: relative;
+    transition: .3s;
+}
+
+.result_item:hover {
+    border: 1px solid #0b8eed;
+}
+
+.result_item>div {
+    padding: 5px 0;
+}
+
+.result_item .r-num {
+    color: #666;
+    background-color: #f3f8fc;
+    position: absolute;
+    height: 20px;
+    min-width: 20px;
+    line-height: 20px;
+    font-size: 11px;
+    text-align: center;
+    padding: 0;
+    top: 0;
+    left: 0;
+    transition: .3s;
+}
+
+.result_item:hover .r-num {
+    color: #fff;
+    background-color: #0b8eed;
+}
+
+.result_item .r-download {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    color: #0b8eed;
+}
+
+.result_item .r-title h4 {
+    max-width: 95%;
+}
+
+.result_item .r-title h4 p {
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 400;
+    font-size: 18px;
+    transition: all .3s;
+}
+
+.result_item .r-title h4 p span {
+    font-size: 20px;
+    color: #1a1a1a;
+}
+
+.result_item .r-keywords {
+    margin-left: -5px;
+    padding: 0;
+}
+
+.result_item .r-keywords span {
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 5px;
+    color: #00b3ea;
+    border: 1px solid #00b3ea;
+    background-color: rgba(0, 179, 234, .11);
+    border-radius: 2px;
+    margin: 5px;
+}
+
+.result_item .r-message {
+    padding-bottom: 10px;
+}
+
+.result_item .r-message span {
+    margin-right: 30px;
+    color: #000;
+    font-size: 14px;
+    position: relative;
+}
+
+.result_item .r-message b {
+    color: #e6451a;
+}
+
+.result_item .r-message span:after {
+    content: " ";
+    position: absolute;
+    top: 2px;
+    height: 12px;
+    right: -15px;
+    width: 1px;
+    display: inline-block;
+    background-color: #ddd;
+}
+
+.result_item .r-nav .result_item_tabs ul {
+    border-bottom: 2px solid #0b8eed;
+}
+
+.result_item .r-nav .result_item_tabs ul li {
+    width: 90px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    color: #0b8eed;
+    font-weight: 700;
+    display: inline-block;
+    border-radius: 4px 4px 0 0;
+}
+
+.result_item .r-nav .result_item_tabs ul li.chose,
+.result_item .r-nav .result_item_tabs ul li:hover {
+    color: #fff;
+    background-color: #0b8eed;
+}
+
+.result_item .r-nav .result_item_cont ul {
+    padding-top: 10px;
+}
+
+.result_item .r-nav .result_item_cont ul li {
+    display: none;
+    font-size: 14px;
+    line-height: 24px;
+    text-indent: 2em;
+    letter-spacing: .5px;
+    transition: .3s;
+}
+
+.result_item .r-nav .result_item_cont ul li.chose {
+    display: block!important;
+}
+
+#applicable_law dl {
+    text-indent: 0;
+}
+
+#applicable_law dl dt,
+#applicable_law dl dd{
+    display: inline-block;
+}
+
+#calendarCase dl dd {
+    margin-bottom: 10px;
+}
+
+#calendarCase dl dd:last-child {
+    margin: 0;
+}
+
+#calendarCase dl dd div {
+    width: 80%;
+    margin-left: 100px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    color: #333;
+    transition: .3s;
+    position: relative;
+}
+
+#calendarCase dl dd div.is-active {
+    cursor: pointer;
+}
+
+#calendarCase dl dd div.myself {
+    color: #0b8eed;
+    border: 1px solid #0b8eed!important;
+}
+
+ #calendarCase dl dd div:before {
+    content: "";
+    position: absolute;
+    transition: .3s;
+    top: 11px;
+    left: -9px;
+    border: 4px solid transparent;
+    border-right-color: #ddd;
+}
+
+#calendarCase dl dd div.myself:before {
+    border-color: transparent #0b8eed transparent transparent;
+}
+
+#calendarCase dl dd div:after {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: -7px;
+    border: 4px solid transparent;
+    border-right-color: #fff;
+}
+
+#calendarCase dl dd div span {
+    margin-right: 15px;
+}
+
+.fg {
+    color: #0b8eed;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+b {
+    color: #e6451a;
+}
+
+/* echarts图 */
+.case-trend-panel {
+    padding-bottom: 15px;
+}
+
+.charts-row {
+    margin: 0 -15px;
+}
+
+.charts-col {
+    float: left;
+    width: 33.333%;
+    padding: 0 15px;
+}
+
+.chart-item {}
+
+.chart-item h5 {
+    height: 36px;
+    line-height: 36px;
+    margin-bottom: 4px;
+    text-align: center;
+    background: rgba(54, 165, 244, .4);
+}
+
+.chart-item .chart-box {
+    height: 347px;
+    border: 1px solid rgba(11, 142, 237, .4);
+}
+
+.trend-portrait {}
+
+.trend-box {
+    padding: 25px 80px 45px 64px;
+    background-color: #FFF;
+    overflow: auto;
+}
+
+.parties-list {
+    width: 340px;
+}
+
+.parties-item {
+    margin-bottom: 20px;
+}
+
+.parties-item h5 {
+    height: 30px;
+    padding-left: 44px;
+    line-height: 30px;
+    color: #FFF;
+    font-weight: 700;
+    background-color: #0B8EED;
+    cursor: pointer;
+    position: relative;
+}
+
+.parties-item h5:after {
+    content: '';
+    position: absolute;
+    left: 22px;
+    top: 50%;
+    width: 15px;
+    height: 18px;
+    transform: translateY(-50%);
+    background: url('../../assets/image/spirit01.png') -22px -22px no-repeat;
+}
+
+.parties-item ul {
+    padding: 20px 30px;
+    background-color: #E6F8FF;
+}
+
+.parties-item ul li {
+    margin-bottom: 20px;
+    padding-left: 10px;
+    border-left: 2px solid #A0A0A0;
+}
+
+.parties-item ul li:last-child {
+    margin-bottom: 0;
+}
+
+.parties-item ul li p {
+    height: 15px;
+    line-height: 15px;
+    margin-bottom: 5px;
+    color: #000000;
+}
+
+.parties-item ul li p:last-child {
+    margin-bottom: 0;
+}
+
+.parties-item ul li p span {
+    color: #FE8144;
+    vertical-align: middle;
+}
+
+.parties-item ul li p span.num {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.parties-item ul li p span.unit {}
+
+.timeline-box {
+    margin-left: 410px;
+}
+
+.timeline-case {
+    padding: 0 15px !important;
+    overflow: hidden;
+}
+
+.timeline-case li {
+    float: left;
+    width: 33%;
+    padding-right: 15px;
+    list-style: none !important;
+    color: #000000;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -10px;
+    top: -3px;
+    z-index: 10;
+    width: 31px;
+    height: 28px;
+    line-height: 20px;
+    background: #FFF url('../../assets/image/spirit01.png') -37px -42px no-repeat;
+    cursor: pointer;
+}
+
+.layui-timeline-item{
+    padding-left: 38px;
+}
+
+.layui-timeline-item:before {
+    content: '';
+    position: absolute;
+    left: 3px;
+    top: 0;
+    z-index: 0;
+    width: 4px;
+    height: 100%;
+    background-image: linear-gradient(#ffbc07, #f9414f);
+}
+
+.timeline-box .layui-colla-title {
+    height: 40px;
+    line-height: 40px;
+    /* color: #0B8EED; */
+    background-color: #FAFAFA;
+}
+
+.timeline-box .layui-colla-content {
+    margin: 0 -1px;
+    border: 1px solid #1B9CFF;
+    border-radius: 3px;
+}
+
+.timeline-box .layui-colla-item {
+    border-color: #DDD;
+}
+
+.load-more {
+    height: 40px;
+    line-height: 40px;
+    border-top: 1px solid #DDD;
+    color: #0B8EED;
+    text-align: center;
+    background-color: #FAFAFA;
+    cursor: pointer;
+}
+
+.load-more span {
+    display: inline-block;
+    padding-right: 16px;
+    position: relative;
+}
+
+.load-more span:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 10px;
+    height: 12px;
+    transform: translateY(-50%);
+    background: url(../../assets/image/spirit01.png) -8px -25px no-repeat;
+}
+
+/* 检索 */
+.retrieve-box {
+    height: 100%;
+    position: relative;
+}
+
+.retrieve-wrapper {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    width: 750px;
+    padding: 30px 35px;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0px 1px 9px 0px rgba(6, 99, 178, 0.2);
+}
+
+.retrieve-inner-wrapper input {
+    float: left;
+    width: 573px;
+    height: 38px;
+    margin-right: 10px;
+    padding: 0 15px;
+    line-height: 38px;
+    color: #000;
+    box-shadow: 0px 3px 7px 0px rgba(159, 218, 199, 0.35);
+}
+
+.retrieve-inner-wrapper button {
+    float: left;
+    width: 97px;
+    height: 38px;
+    color: #FFF;
+    vertical-align: middle;
+    background: rgba(241, 145, 73, 1);
+    box-shadow: 0px 9px 14px 2px rgba(52, 54, 55, 0.21);
+    cursor: pointer;
+}
+
+/* layui */
+.layui-input {
+    border: none;
+    color: #8E8E8E;
+    box-shadow: 0px 2px 4px 0px rgba(6, 99, 178, 0.19);
+    border-radius: 3px;
+}
+
+.layui-table-header {
+    margin-bottom: 10px;
+    border: none;
+}
+
+.layui-table thead tr {
+    color: #FFF;
+    background: rgba(11, 142, 237, .5);
+}
+
+.layui-table-view .layui-table td {
+    padding: 20px 0;
+}
+
+/* 折叠面板 */
+.referenced-law-panel .layui-colla-title {
+    height: 36px;
+    line-height: 36px;
+    color: #FEFEFE;
+    font-size: 14px;
+    font-weight: bold;
+    background: rgba(11, 142, 237, 1);
+    box-shadow: 0px 5px 12px 1px rgba(11, 142, 237, 0.21);
+    border-radius: 4px;
+}
+
+.referenced-law-panel .layui-collapse {
+    border: none;
+}
+
+.referenced-law-panel .layui-colla-content,
+.referenced-law-panel .layui-colla-item {
+    border: none;
+}
+
+.referenced-law-panel .layui-colla-item {
+    margin-bottom: 10px;
+}
+
+
+/* echarts */
+.tootip-box{
+  padding: 10px;
+  box-shadow: 0px 5px 7px 1px rgba(0, 0, 0, 0.1);
+}
+
+.tootip-box ul{
+    position: relative;
+}
+.tootip-box ul:after{
+    content: '';
+    position: absolute;
+    left: 73px;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #7D7D7D;
+}
+.tootip-box ul li{
+    margin-bottom: 5px;
+    line-height: 16px;
+}
+.tootip-box ul li:last-child{
+    margin-bottom: 0;
+}
+.tootip-box ul span{
+    display: inline-block;
+    vertical-align: middle;
+}
+.tootip-box ul span.label{
+    width: 60px;
+    padding-right: 25px;
+    text-align: right;
+}
+.tootip-box ul span.value{
+
+}
+
+/* tab */
+.case-list_b .layui-tab-title{
+    position: absolute;
+    left: 25px;
+    top: -125px;
+    height: 34px;
+    border-radius: 3px;
+}
+
+.case-list_b .layui-tab-title li{
+    margin-left: -1px;
+    line-height: 32px;
+    color: #737475;
+    font-weight:bold;
+    border:1px solid rgba(191,191,191,1);
+    background:rgba(238,238,238,1);
+}
+.case-list_b .layui-tab-title li:hover,
+.case-list_b .layui-tab-title .layui-this{
+    background-color:#1B9CFF;
+    color: #FFF;
+    border:1px solid #1B9CFF;
+    /* border-radius: 3px; */
+}
+.case-list_b .layui-tab-title .layui-this:after{
+    display: none;
+}

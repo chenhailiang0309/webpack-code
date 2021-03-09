@@ -1,0 +1,25 @@
+{
+  "name": "demo04",
+  "version": "1.0.0",
+  "description": "aaa",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "cmdBuild": "webpack-cli --entry ./app/main.js --output ./public/bundle.js",
+    "dev": "webpack-dev-server --open"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^5.11.1"
+  },
+  "dependencies": {
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}

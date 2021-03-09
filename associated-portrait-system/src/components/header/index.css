@@ -1,0 +1,86 @@
+.header {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background: #FFF;
+}
+
+.header-l {
+    display: inline-block;
+    margin-left: 35px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.header-r {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    z-index: 1;
+    transform: translateY(-50%);
+
+}
+
+.top-search {
+    display: inline-block;
+    position: relative;
+}
+
+.search-ipt {
+    width: 180px;
+    height: 30px;
+    padding-left: 15px;
+    padding-right: 36px;
+    line-height: 30px;
+    border-radius: 15px;
+    background-color: #EAF5FE;
+}
+
+.top-search__btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    width: 16px;
+    height: 16px;
+    transform: translateY(-50%);
+    vertical-align: middle;
+    background: url('../../assets/image/spirit01.png') -41px -1px no-repeat;
+    cursor: pointer;
+}
+
+.remind {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: 0 0px 0 12px;
+    vertical-align: middle;
+    background: url('../../assets/image/spirit01.png') -2px -2px no-repeat;
+}
+
+.user-wrapper {
+    display: inline-block;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.avator {
+    display: inline-block;
+    width: 15px;
+    height: 16px;
+    margin-right: 5px;
+    vertical-align: middle;
+    background: url('../../assets/image/spirit01.png') -22px -2px no-repeat;
+}
+
+.username {
+    margin-right: 5px;
+}
+
+.user-wrapper i {
+    color: #0B8EED;
+    font-size: 12px;
+}

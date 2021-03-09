@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="./resource/font-awesome-4.7.0/css/font-awesome.css" />
+    <title>司法大数据画像系统</title>
+    <link rel="stylesheet" href="./resource/layui/css/layui.css" />
+    <link rel="stylesheet" href="./css/public.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+</head>
+
+<body class="">
+    <div id="header">
+        <!-- TODO -->
+    </div>
+    <div class="container">
+        <div class="caseStatus fl">
+            <ul id="caseStatus-list" class="caseStatus-list">
+                <li class="active">在办案件<span class="case-num">120</span></li>
+                <li>已结案件<span class="case-num">120</span></li>
+                <li>全部案件<span class="case-num">240</span></li>
+                <li class="search-item">检索<span class="case-num">240</span></li>
+            </ul>
+        </div>
+        <div class="main">
+            <!-- 画像 -->
+            <div class="portrait-box">
+                <!-- 画像部分 -->
+                <div class="portrait-panel">
+                    <!-- 查看列表 -->
+                    <span id="back-list" class="back-list"><i></i>查看列表</span>
+                    <!-- tab -->
+                    <ul class="portrait-tab clearfix">
+                        <li class="active">案件画像</li>
+                        <li>当事人画像</li>
+                        <li>当事人关联案件变化趋势分析图</li>
+                    </ul>
+                    <!-- 案件画像 -->
+                    <div class="case-portrait" style="display: block;">
+                        <ul id="case-portrait-keywords" class="portrait-keywords clearfix">
+                            <li>案号：00001</li>
+                            <li>案由：交通肇事</li>
+                            <li>上诉方：张三</li>
+                            <li>被上诉方：张三</li>
+                            <li>立案日期：2018-10-20</li>
+                            <li>状态：审理中</li>
+                        </ul>
+                        <div class="portrait-chart">
+                            <ul class="list-tab clearfix">
+                                <li class="active">参考法条</li>
+                                <li>类似案件</li>
+                                <li>类案趋势</li>
+                            </ul>
+                            <div id="caseChart" style="width: 100%;height: 100%;"></div>
+                        </div>
+                        <div class="case-list">
+                            <div class="case-list_t">
+                                本案特征：
+                                <form class="layui-form" style="display: inline-block;">
+                                    <input type="checkbox" name="" title="机动车交通事故责任纠纷" lay-skin="primary" checked>
+                                    <input type="checkbox" name="" title="赔偿损失" lay-skin="primary">
+                                    <input type="checkbox" name="" title="第三人" lay-skin="primary">
+                                    <input type="checkbox" name="" title="逃逸" lay-skin="primary">
+                                    <input type="checkbox" name="" title="案件特征" lay-skin="primary">
+                                </form>
+                            </div>
+                            <div class="case-list_b">
+                                <!-- 参考法条 -->
+                                <div class="referenced-law-panel" style="display: block;">
+                                    <div class="layui-collapse" lay-accordion>
+                                        <div class="layui-colla-item">
+                                            <h2 class="layui-colla-title">司法解释(8)</h2>
+                                            <div class="layui-colla-content layui-show">
+                                                <ul class="law-list">
+                                                    <li>
+                                                        <h5>最高人民法院关于审理<span>交通肇事</span>刑事案件具体应用法律若干问题的解释</h5>
+                                                        <p>法释【2000】33号 / 2000.11.15公布 / 2000.11.21施行</p>
+                                                    </li>
+                                                    <li>
+                                                        <h5>最高人民法院关于审理<span>交通肇事</span>刑事案件具体应用法律若干问题的解释</h5>
+                                                        <p>法释【2000】33号 / 2000.11.15公布 / 2000.11.21施行</p>
+                                                    </li>
+                                                    <li>
+                                                        <h5>最高人民法院关于审理<span>交通肇事</span>刑事案件具体应用法律若干问题的解释</h5>
+                                                        <p>法释【2000】33号 / 2000.11.15公布 / 2000.11.21施行</p>
+                                                    </li>
+                                                    <li>
+                                                        <h5>最高人民法院关于审理<span>交通肇事</span>刑事案件具体应用法律若干问题的解释</h5>
+                                                        <p>法释【2000】33号 / 2000.11.15公布 / 2000.11.21施行</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="layui-colla-item">
+                                            <h2 class="layui-colla-title">部门规章(7)</h2>
+                                            <div class="layui-colla-content">
+                                                <ul class="law-list">
+                                                    <li>
+                                                        <h5>最高人民法院关于审理<span>交通肇事</span>刑事案件具体应用法律若干问题的解释</h5>
+                                                        <p>法释【2000】33号 / 2000.11.15公布 / 2000.11.21施行</p>
+                                                    </li>
+                                                    <li>
+                                                        <h5>最高人民法院关于审理<span>交通肇事</span>刑事案件具体应用法律若干问题的解释</h5>
+                                                        <p>法释【2000】33号 / 2000.11.15公布 / 2000.11.21施行</p>
+                                                    </li>
+                                                    <li>
+                                                        <h5>最高人民法院关于审理<span>交通肇事</span>刑事案件具体应用法律若干问题的解释</h5>
+                                                        <p>法释【2000】33号 / 2000.11.15公布 / 2000.11.21施行</p>
+                                                    </li>
+                                                    <li>
+                                                        <h5>最高人民法院关于审理<span>交通肇事</span>刑事案件具体应用法律若干问题的解释</h5>
+                                                        <p>法释【2000】33号 / 2000.11.15公布 / 2000.11.21施行</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="layui-colla-item">
+                                            <h2 class="layui-colla-title">地方政府规章(2)</h2>
+                                            <div class="layui-colla-content">
+                                                <ul class="law-list">
+                                                    <li>
+                                                        <h5>最高人民法院关于审理<span>交通肇事</span>刑事案件具体应用法律若干问题的解释</h5>
+                                                        <p>法释【2000】33号 / 2000.11.15公布 / 2000.11.21施行</p>
+                                                    </li>
+                                                    <li>
+                                                        <h5>最高人民法院关于审理<span>交通肇事</span>刑事案件具体应用法律若干问题的解释</h5>
+                                                        <p>法释【2000】33号 / 2000.11.15公布 / 2000.11.21施行</p>
+                                                    </li>
+                                                    <li>
+                                                        <h5>最高人民法院关于审理<span>交通肇事</span>刑事案件具体应用法律若干问题的解释</h5>
+                                                        <p>法释【2000】33号 / 2000.11.15公布 / 2000.11.21施行</p>
+                                                    </li>
+                                                    <li>
+                                                        <h5>最高人民法院关于审理<span>交通肇事</span>刑事案件具体应用法律若干问题的解释</h5>
+                                                        <p>法释【2000】33号 / 2000.11.15公布 / 2000.11.21施行</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="layui-colla-item">
+                                            <h2 class="layui-colla-title">地方司法文件(4)</h2>
+                                            <div class="layui-colla-content">
+                                                <ul class="law-list">
+                                                    <li>
+                                                        <h5>最高人民法院关于审理<span>交通肇事</span>刑事案件具体应用法律若干问题的解释</h5>
+                                                        <p>法释【2000】33号 / 2000.11.15公布 / 2000.11.21施行</p>
+                                                    </li>
+                                                    <li>
+                                                        <h5>最高人民法院关于审理<span>交通肇事</span>刑事案件具体应用法律若干问题的解释</h5>
+                                                        <p>法释【2000】33号 / 2000.11.15公布 / 2000.11.21施行</p>
+                                                    </li>
+                                                    <li>
+                                                        <h5>最高人民法院关于审理<span>交通肇事</span>刑事案件具体应用法律若干问题的解释</h5>
+                                                        <p>法释【2000】33号 / 2000.11.15公布 / 2000.11.21施行</p>
+                                                    </li>
+                                                    <li>
+                                                        <h5>最高人民法院关于审理<span>交通肇事</span>刑事案件具体应用法律若干问题的解释</h5>
+                                                        <p>法释【2000】33号 / 2000.11.15公布 / 2000.11.21施行</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="layui-colla-item">
+                                            <h2 class="layui-colla-title">地方规范性文件(4)</h2>
+                                            <div class="layui-colla-content">
+                                                <ul class="law-list">
+                                                    <li>
+                                                        <h5>最高人民法院关于审理<span>交通肇事</span>刑事案件具体应用法律若干问题的解释</h5>
+                                                        <p>法释【2000】33号 / 2000.11.15公布 / 2000.11.21施行</p>
+                                                    </li>
+                                                    <li>
+                                                        <h5>最高人民法院关于审理<span>交通肇事</span>刑事案件具体应用法律若干问题的解释</h5>
+                                                        <p>法释【2000】33号 / 2000.11.15公布 / 2000.11.21施行</p>
+                                                    </li>
+                                                    <li>
+                                                        <h5>最高人民法院关于审理<span>交通肇事</span>刑事案件具体应用法律若干问题的解释</h5>
+                                                        <p>法释【2000】33号 / 2000.11.15公布 / 2000.11.21施行</p>
+                                                    </li>
+                                                    <li>
+                                                        <h5>最高人民法院关于审理<span>交通肇事</span>刑事案件具体应用法律若干问题的解释</h5>
+                                                        <p>法释【2000】33号 / 2000.11.15公布 / 2000.11.21施行</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 类似案件 -->
+                                <div class="similar-cases-panel" style="display: none;">
+                                </div>
+                                <!-- 类案趋势 -->
+                                <div class="case-trend-panel" style="display: none;">
+                                    <div class="charts-row clearfix">
+                                        <div class="charts-col">
+                                            <div class="chart-item">
+                                                <h5>案件数量变化趋势</h5>
+                                                <div class="chart-box">
+                                                    <div id="line" style="width: 100%;height: 100%;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="charts-col">
+                                            <div class="chart-item">
+                                                <h5>案件分布热力图</h5>
+                                                <div class="chart-box">
+                                                    <div id="map" style="width: 100%;height: 100%;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="charts-col">
+                                            <div class="chart-item">
+                                                <h5>裁判结果分析</h5>
+                                                <div class="chart-box">
+                                                    <div id="pie" style="width: 100%;height: 100%;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 当事人画像 -->
+                    <div class="parties-portrait" style="display: none;">
+                        <ul id="parties-portrait-keywords" class="portrait-keywords clearfix">
+                            <li>案号：00001</li>
+                            <li>案由：交通肇事</li>
+                            <li>原告：张三</li>
+                            <li>被告：张三</li>
+                            <li>状态：审理中</li>
+                        </ul>
+                        <div class="portrait-chart">
+                            <div id="partiesChart" style="width: 100%;height: 100%;"></div>
+                        </div>
+                    </div>
+                    <!-- 当事人关联案件变化趋势分析图 -->
+                    <div class="trend-portrait" style="display: none;">
+                        <ul id="trend-portrait-keywords" class="portrait-keywords clearfix">
+                            <li>案号：00001</li>
+                            <li>案由：交通肇事</li>
+                            <li>原告：张三</li>
+                            <li>被告：张三</li>
+                            <li>状态：审理中</li>
+                        </ul>
+                        <div class="trend-box">
+                            <!-- 当事人列表 -->
+                            <div class="parties-list fl">
+                                <div class="parties-item">
+                                    <h5>当事人一：张三</h5>
+                                    <ul>
+                                        <li>
+                                            <p>
+                                                历史案件：<span class="num">4</span><span class="unit">件</span>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                民事案件：<span class="num">2</span><span class="unit">件</span>
+                                            </p>
+                                            <p>
+                                                涉案标的：<span class="num">1233</span><span class="unit">元</span>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                刑事案件：<span class="num">1</span><span class="unit">件</span>
+                                            </p>
+                                            <p>
+                                                曾受刑事处罚执行案件：<span class="num">11</span><span class="unit">件</span>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                执行案件：<span class="num">1</span><span class="unit">件</span>
+                                            </p>
+                                            <p>失信被执行人，限制高消费</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="parties-item">
+                                    <h5>当事人二：张三</h5>
+                                    <ul>
+                                        <li>
+                                            <p>
+                                                历史案件：<span class="num">4</span><span class="unit">件</span>
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="parties-item">
+                                    <h5>当事人三：张三</h5>
+                                    <ul>
+                                        <li>
+                                            <p>
+                                                历史案件：<span class="num">4</span><span class="unit">件</span>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                民事案件：<span class="num">2</span><span class="unit">件</span>
+                                            </p>
+                                            <p>
+                                                涉案标的：<span class="num">1233</span><span class="unit">元</span>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                刑事案件：<span class="num">1</span><span class="unit">件</span>
+                                            </p>
+                                            <p>
+                                                曾受刑事处罚执行案件：<span class="num">11</span><span class="unit">件</span>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                执行案件：<span class="num">1</span><span class="unit">件</span>
+                                            </p>
+                                            <p>失信被执行人，限制高消费</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="parties-item">
+                                    <h5>当事人四：张三</h5>
+                                    <ul>
+                                        <li>
+                                            <p>
+                                                历史案件：<span class="num">4</span><span class="unit">件</span>
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- 时间线 -->
+                            <div class="timeline-box">
+                                <ul class="layui-timeline">
+                                    <li class="layui-timeline-item">
+                                        <i class="layui-icon layui-timeline-axis"></i>
+                                        <div class="layui-timeline-content layui-text">
+                                            <h3 class="layui-timeline-title">2018年8月18日</h3>
+                                            <div class="layui-collapse" lay-accordion>
+                                                <div class="layui-colla-item">
+                                                    <h5 class="layui-colla-title">(XXXX)XXXXXX第XXXX</h5>
+                                                    <div class="layui-colla-content layui-show">
+                                                        <ul class="timeline-case">
+                                                            <li>立案时间：2016-12-20</li>
+                                                            <li>承办庭室：XXX</li>
+                                                            <li>承办法官：XXX</li>
+                                                            <li>承办法院：XXX法院</li>
+                                                            <li>案件状态：XXX</li>
+                                                            <li>当&nbsp;&nbsp;事&nbsp;&nbsp;人：XXX</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="layui-colla-item">
+                                                    <h5 class="layui-colla-title">(XXXX)XXXXXX第XXXX</h5>
+                                                    <div class="layui-colla-content">
+                                                        <ul class="timeline-case">
+                                                            <li>立案时间：2016-12-20</li>
+                                                            <li>承办庭室：XXX</li>
+                                                            <li>承办法官：XXX</li>
+                                                            <li>承办法院：XXX法院</li>
+                                                            <li>案件状态：XXX</li>
+                                                            <li>当&nbsp;&nbsp;事&nbsp;&nbsp;人：XXX</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="layui-colla-item">
+                                                    <h5 class="layui-colla-title">(XXXX)XXXXXX第XXXX</h5>
+                                                    <div class="layui-colla-content">
+                                                        <ul class="timeline-case">
+                                                            <li>立案时间：2016-12-20</li>
+                                                            <li>承办庭室：XXX</li>
+                                                            <li>承办法官：XXX</li>
+                                                            <li>承办法院：XXX法院</li>
+                                                            <li>案件状态：XXX</li>
+                                                            <li>当&nbsp;&nbsp;事&nbsp;&nbsp;人：XXX</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="load-more"><span>查看更多</span></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="layui-timeline-item">
+                                        <i class="layui-icon layui-timeline-axis"></i>
+                                        <div class="layui-timeline-content layui-text">
+                                            <h3 class="layui-timeline-title">2019年8月18日</h3>
+                                            <div class="layui-collapse" lay-accordion>
+                                                <div class="layui-colla-item">
+                                                    <h5 class="layui-colla-title">(XXXX)XXXXXX第XXXX</h5>
+                                                    <div class="layui-colla-content layui-show">
+                                                        <ul class="timeline-case">
+                                                            <li>立案时间：2016-12-20</li>
+                                                            <li>承办庭室：XXX</li>
+                                                            <li>承办法官：XXX</li>
+                                                            <li>承办法院：XXX法院</li>
+                                                            <li>案件状态：XXX</li>
+                                                            <li>当&nbsp;&nbsp;事&nbsp;&nbsp;人：XXX</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="layui-colla-item">
+                                                    <h5 class="layui-colla-title">(XXXX)XXXXXX第XXXX</h5>
+                                                    <div class="layui-colla-content">
+                                                        <ul class="timeline-case">
+                                                            <li>立案时间：2016-12-20</li>
+                                                            <li>承办庭室：XXX</li>
+                                                            <li>承办法官：XXX</li>
+                                                            <li>承办法院：XXX法院</li>
+                                                            <li>案件状态：XXX</li>
+                                                            <li>当&nbsp;&nbsp;事&nbsp;&nbsp;人：XXX</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="layui-colla-item">
+                                                    <h5 class="layui-colla-title">(XXXX)XXXXXX第XXXX</h5>
+                                                    <div class="layui-colla-content">
+                                                        <ul class="timeline-case">
+                                                            <li>立案时间：2016-12-20</li>
+                                                            <li>承办庭室：XXX</li>
+                                                            <li>承办法官：XXX</li>
+                                                            <li>承办法院：XXX法院</li>
+                                                            <li>案件状态：XXX</li>
+                                                            <li>当&nbsp;&nbsp;事&nbsp;&nbsp;人：XXX</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="load-more"><span>查看更多</span></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="layui-timeline-item">
+                                        <i class="layui-icon layui-timeline-axis"></i>
+                                        <div class="layui-timeline-content layui-text">
+                                            <h3 class="layui-timeline-title">2020年2月18日</h3>
+                                            <div class="layui-collapse" lay-accordion>
+                                                <div class="layui-colla-item">
+                                                    <h5 class="layui-colla-title">(XXXX)XXXXXX第XXXX</h5>
+                                                    <div class="layui-colla-content layui-show">
+                                                        <ul class="timeline-case">
+                                                            <li>立案时间：2016-12-20</li>
+                                                            <li>承办庭室：XXX</li>
+                                                            <li>承办法官：XXX</li>
+                                                            <li>承办法院：XXX法院</li>
+                                                            <li>案件状态：XXX</li>
+                                                            <li>当&nbsp;&nbsp;事&nbsp;&nbsp;人：XXX</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="layui-colla-item">
+                                                    <h5 class="layui-colla-title">(XXXX)XXXXXX第XXXX</h5>
+                                                    <div class="layui-colla-content">
+                                                        <ul class="timeline-case">
+                                                            <li>立案时间：2016-12-20</li>
+                                                            <li>承办庭室：XXX</li>
+                                                            <li>承办法官：XXX</li>
+                                                            <li>承办法院：XXX法院</li>
+                                                            <li>案件状态：XXX</li>
+                                                            <li>当&nbsp;&nbsp;事&nbsp;&nbsp;人：XXX</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="layui-colla-item">
+                                                    <h5 class="layui-colla-title">(XXXX)XXXXXX第XXXX</h5>
+                                                    <div class="layui-colla-content">
+                                                        <ul class="timeline-case">
+                                                            <li>立案时间：2016-12-20</li>
+                                                            <li>承办庭室：XXX</li>
+                                                            <li>承办法官：XXX</li>
+                                                            <li>承办法院：XXX法院</li>
+                                                            <li>案件状态：XXX</li>
+                                                            <li>当&nbsp;&nbsp;事&nbsp;&nbsp;人：XXX</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="load-more"><span>查看更多</span></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 检索 -->
+            <div class="retrieve-box" style="display: none;">
+                <div class="retrieve-wrapper">
+                    <div class="retrieve-inner-wrapper clearfix">
+                        <input type="text" placeholder="输入当事人姓名/案号"><button>检索</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./resource/jquery-1.9.1.min.js"></script>
+    <script src="./resource/layui/layui.all.js"></script>
+    <script src="./resource/bluebird/bluebird.min.js"></script>
+    <script src="./resource/echarts.js"></script>
+    <script src="./resource/china.js"></script>
+    <script src="./js/chartsOptions.js"></script>
+    <script src="./js/public.js"></script>
+    <script src="./js/api/ajax.js"></script>
+    <script src="./js/api/api.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

@@ -2,7 +2,7 @@
 
 const glob = require("glob");
 const path = require("path");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin"); // css hash 抽离
+const MiniCssExtractPlugin = require("mini-css-extract-plugin"); // css hash 抽离  单独css文件
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin"); // css 压缩
 const HtmlWebpackPlugin = require("html-webpack-plugin"); // html压缩
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
@@ -100,13 +100,12 @@ module.exports = {
         ]
       }
     ]
-
   },
   plugins: [
-    new MiniCssExtractPlugin({
+    new MiniCssExtractPlugin({ // 抽离css 单独打包成css 文件
       filename: "[name]_[contenthash:8].css"
     }),
-    new OptimizeCSSAssetsPlugin({
+    new OptimizeCSSAssetsPlugin({ // css  压缩
       assetNameRegExp: /\.css$/g,
       cssProcessor: require("cssnano")
     }),
